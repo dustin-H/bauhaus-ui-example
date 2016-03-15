@@ -18,4 +18,4 @@ app.use(bauhausui(config))
 
 app.post('/api/login', jsonParser, login)
 
-app.listen(8123)
+app.listen(5000)
