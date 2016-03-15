@@ -8,6 +8,13 @@ module.exports = function(){
 
   var theData = {};
 
+  app.use(function(req, res, next){
+    if(req.headers != null && req.headers.authorization != null && req.headers.authorization === 'NotSecureToken'){
+      return next()
+    }
+    res.status(401).send()
+  })
+
   app.get('/:id', function(req, res) {
     if (theData[req.params.id] !== false) {
       if (theData[req.params.id] == null) {
@@ -26,7 +33,7 @@ module.exports = function(){
   });
 
   app.delete('/:id', function(req, res) {
-    theData[req.params.id] = false;
+    theData[req.params.id] = null;
     res.send();
   });
 

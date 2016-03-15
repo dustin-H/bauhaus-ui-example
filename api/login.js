@@ -1,12 +1,14 @@
 
 module.exports = function(req, res) {
-  // Check login here
+  if (req.body.username !== 'demo' || req.body.password !== 'demo') {
+    return res.status(401).send()
+  }
   res.json({
-    token: 'H3kdic8dkHjkd832jd',
+    token: 'NotSecureToken',
     profile: {
       firstname: 'Steve',
       lastname: 'Jobs',
-      avatarUrl: 'api/img/steve-jobs.jpg'
+      avatarUrl: 'static/steve-jobs.jpg'
     }
   })
 }

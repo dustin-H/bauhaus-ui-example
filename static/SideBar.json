@@ -5,10 +5,10 @@
 		"imageUrl": "media/icons/channels.svg"
 	}, {
 		"name": "Post B",
-		"pathname": "/posts/testA",
+		"pathname": "/posts/testB",
 		"imageUrl": "media/icons/channels.svg"
 	}, {
-		"name": "Menu",
-		"pathname": "/menu"
+		"name": "All functions",
+		"pathname": "/"
 	}]
 }
