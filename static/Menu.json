@@ -1,0 +1,21 @@
+{
+	"content": {
+		"name": "SimpleLinkList",
+		"props": {
+			"title": "Liste der sinnlosen Dinge",
+			"list": [{
+				"name": "Das ist toll!",
+				"pathname": "/posts"
+			}, {
+				"name": "Hallo Welt",
+				"pathname": "/posts"
+			}, {
+				"name": "Raumfahrt",
+				"pathname": "/menu"
+			}, {
+				"name": "Es lebe der Keks!",
+				"pathname": "/menu"
+			}]
+		}
+	}
+}

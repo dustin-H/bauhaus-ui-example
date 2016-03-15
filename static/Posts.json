@@ -1,0 +1,230 @@
+{
+	"content": {
+		"name": "JsonForm",
+		"props": {
+			"url": "/json/:id",
+			"title": "Mein schönes Testformular"
+		},
+		"components": [{
+			"name": "Condition",
+			"props": {
+				"valueA": "Hui abc",
+				"pathB": "hallo.welt.test",
+				"operator": "=="
+			},
+			"components": [{
+				"name": "Label",
+				"props": {
+					"text": "Label 1 erscheint wenn es stimmt!"
+				},
+				"components": []
+			}, {
+				"name": "Label",
+				"props": {
+					"text": "Label 2 erscheint wenn es nicht stimmt!"
+				},
+				"components": []
+			}]
+		}, {
+			"name": "Section",
+			"props": {
+				"text": "EINS EINS EINS",
+				"folded": false
+			},
+			"components": [{
+				"name": "Label",
+				"props": {
+					"text": "POSTS NEU LABEL",
+					"info": "Please write some nice words! It would be nice if your words are not colored red, because otherwise they will not be sent!"
+				},
+				"components": [{
+					"name": "InputText",
+					"props": {
+						"path": "hallo.welt.test"
+					}
+				}, {
+					"name": "Validator",
+					"props": {
+						"path": "hallo.welt.test",
+						"required": true,
+						"regex": "abc",
+						"failMessage": "This needs to include \"abc\"!"
+					}
+				}]
+			}, {
+				"name": "Label",
+				"props": {
+					"text": "DateInput"
+				},
+				"components": [{
+					"name": "InputDateTime",
+					"props": {
+						"path": "hallo.welt.date"
+					}
+				}, {
+					"name": "InputDateTime",
+					"props": {
+						"path": "hallo.welt.date"
+					}
+				}, {
+					"name": "InputDateTime",
+					"props": {
+						"path": "hallo.welt.date",
+						"dateOnly": true
+					}
+				}, {
+					"name": "InputDateTime",
+					"props": {
+						"path": "hallo.welt.date",
+						"timeOnly": true
+					}
+				}]
+			}, {
+				"name": "Label",
+				"props": {
+					"text": "Dein Vorname:"
+				},
+				"components": [{
+					"name": "InputSelect",
+					"props": {
+						"path": "hallo.welt.selectMulti",
+						"multiple": true,
+						"options": {
+							"a": "A Auswahl",
+							"b": "B Auswahl",
+							"c": "C Auswahl"
+						}
+					}
+				}, {
+					"name": "InputPassword",
+					"props": {
+						"path": "hallo.welt.nix"
+					}
+				}, {
+					"name": "Validator",
+					"props": {
+						"path": "hallo.welt.nix",
+						"required": true,
+						"regex": "........",
+						"failMessage": "This needs to have at least 8 characters!"
+					}
+				}]
+			}, {
+				"name": "Label",
+				"props": {
+					"text": "Textarea:"
+				},
+				"components": [{
+					"name": "InputTextarea",
+					"props": {
+						"path": "hallo.welt.textarea"
+					}
+				}, {
+					"name": "Validator",
+					"props": {
+						"path": "hallo.welt.textarea",
+						"required": true,
+						"regex": "........",
+						"failMessage": "This needs to have at least 8 characters!"
+					}
+				}]
+			}]
+		}, {
+			"name": "Section",
+			"props": {
+				"text": "Meine Sektion"
+			},
+			"components": [{
+				"name": "Label",
+				"props": {
+					"text": "Scribe Input"
+				},
+				"components": [{
+					"name": "InputScribe",
+					"props": {
+						"path": "hallo.welt.scribe"
+					}
+				}, {
+					"name": "Validator",
+					"props": {
+						"path": "hallo.welt.scribe",
+						"required": true
+					}
+				}]
+			}, {
+				"name": "Label",
+				"props": {
+					"text": "Scribe Input"
+				},
+				"components": [{
+					"name": "InputTextarea",
+					"props": {
+						"path": "hallo.welt.scribe"
+					}
+				}]
+			}, {
+				"name": "Label",
+				"props": {
+					"text": "Dein Vorname:"
+				},
+				"components": [{
+					"name": "InputCheckbox",
+					"props": {
+						"path": "hallo.welt.checkbox"
+					}
+				}, {
+					"name": "Validator",
+					"props": {
+						"path": "hallo.welt.checkbox",
+						"required": true,
+						"regex": "true",
+						"failMessage": "This needs to be selected!"
+					}
+				}]
+			}, {
+				"name": "Label",
+				"props": {
+					"text": "Meine Select:"
+				},
+				"components": [{
+					"name": "InputSelect",
+					"props": {
+						"path": "hallo.welt.select",
+						"options": {
+							"a": "A Auswahl",
+							"b": "B Auswahl",
+							"c": "C Auswahl"
+						}
+					}
+				}, {
+					"name": "Validator",
+					"props": {
+						"path": "hallo.welt.select",
+						"required": true,
+						"regex": "[a-b]",
+						"failMessage": "This needs to be A or B!"
+					}
+				}]
+			}, {
+				"name": "Label",
+				"props": {
+					"text": "InputNumber:"
+				},
+				"components": [{
+					"name": "InputNumber",
+					"props": {
+						"path": "hallo.welt.number"
+					}
+				}, {
+					"name": "Validator",
+					"props": {
+						"path": "hallo.welt.number",
+						"required": true,
+						"regex": "[0-9]|[1-9][0-9]",
+						"failMessage": "This needs to be between 0 and 99!"
+					}
+				}]
+			}]
+		}]
+	}
+}

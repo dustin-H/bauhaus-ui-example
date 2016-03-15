@@ -1,0 +1,12 @@
+{
+	"routes": {
+		"posts": {
+			"endpoint": "/static/Posts.json",
+			"route": "/posts/:id"
+		},
+		"menu": {
+			"endpoint": "/static/Menu.json",
+			"route": "/menu"
+		}
+	}
+}
