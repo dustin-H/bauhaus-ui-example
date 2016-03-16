@@ -3,7 +3,7 @@
 		"name": "JsonForm",
 		"props": {
 			"url": "/json/:id",
-			"title": "Edit this post"
+			"title": "Edit this Post"
 		},
 		"components": [{
 			"name": "Label",

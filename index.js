@@ -18,4 +18,4 @@ app.use(bauhausui(config))
 
 app.post('/api/login', jsonParser, login)
 
-app.listen(5000)
+app.listen((process.env.PORT || 5000))
