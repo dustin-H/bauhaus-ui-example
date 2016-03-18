@@ -3,7 +3,7 @@ var app = express()
 var express = require('express')
 var bodyParser = require('body-parser')
 var jsonParser = bodyParser.json()
-
+var superagent = require('superagent');
 
 var bauhausui = require('bauhaus-ui')
 var login = require('./api/login')
@@ -19,3 +19,9 @@ app.use(bauhausui(config))
 app.post('/api/login', jsonParser, login)
 
 app.listen((process.env.PORT || 5000))
+
+setInterval(function() {
+  superagent.get('https://bauhaus-ui.herokuapp.com').end(function(err, res) {
+    console.log('REQ', err == null)
+  })
+}, 1000 * 60)
