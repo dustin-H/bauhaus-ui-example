@@ -22,7 +22,7 @@ app.listen((process.env.PORT || 5000))
 
 setInterval(function() {
   var d = (new Date()).getHours()
-  if (d > 7 && d < 22) {
+  if (d > 10 && d < 20) {
     superagent.get('https://bauhaus-ui.herokuapp.com').end(function(err, res) {
       console.log('REQ', err == null)
     })
